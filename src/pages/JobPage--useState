@@ -1,0 +1,35 @@
+// import { useState, useEffect } from "react";
+// import { useParams } from "react-router-dom";
+// import { JobInterface } from "../components/JobListing";
+
+// interface Params {
+//     id: string
+// }
+
+
+// const JobPage: React.FC = () => {
+
+//   const { id } = useParams<{id: string}>();
+//   const [job, setJob] = useState<JobInterface | null> (null);
+//   const [loading, setLoading] = useState(true);
+
+//   useEffect(() => {
+//     const fetchJob = async () => {
+//       try {
+//         const res = await fetch(`http://localhost:9000/jobs/${id}`);
+//         const data: JobInterface = await res.json();
+//         setJob(data);
+//       } catch (err) {
+//         console.log("Error loading job", err);
+//       } finally {
+//         setLoading(false);
+//       }
+//     };
+//     fetchJob();
+//   }, [id]);
+
+//   return loading ? <p>loading ....</p> : <h1>{job?.title}</h1>;
+// };
+
+// //const jobLoader = async(params) =>
+// export default JobPage;
